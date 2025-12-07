@@ -1,0 +1,31 @@
+body {
+    background-color: #EEE;
+    font-family: "Old Standard TT", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 50rem;
+}
+
+a {
+    text-decoration: none;
+    color: #285577;
+}
+
+.button-like {
+    color: #285577;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#about {
+    text-align: right;
+}
+
+nav {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
