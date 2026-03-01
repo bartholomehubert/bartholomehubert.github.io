@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red-black tree visualizer</title>
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <h1>Red-black tree visualizer made with raylib only</h1>
+    <p>This project aims to help visualize how a binary tree is constructed. The source code can be found at <a href="https://github.com/bartholomehubert/rbtreeviz">github.com/bartholomehubert/rbtreeviz</a>. The only library used is raylib. The code is written in C++ and was compiled to webassembly using emscripten.<p/>
+    <div id="viz">
+        <canvas id="cv"></canvas>
+    </div>
+
+    <div id="instr">
+        Usage: </br>
+        The command is space insensitive </br>
+        Press i &lt<tt>value</tt>&gt to insert a node with key <tt>value</tt> </br>
+        Press r &lt<tt>value</tt>&gt to create a random tree with <tt>value</tt> nodes
+        <div>Example:</div>
+        Use  i10 to insert a node with value 10 </br>
+        Use  r15 to create a random tree with 15 nodes </br>
+    </div>
+
+    
+</body>
+
+<style>
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        flex-direction: column;
+    }
+    
+    #viz {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    canvas {
+        margin: 1rem;
+        width: 1200px;
+        pointer-events: none;
+    }
+
+</style>
+
+<script type="module">
+    import createModule from "./index.js";
+
+    createModule({
+      canvas: document.getElementById("cv")
+    });
+</script>
+
+</html>
